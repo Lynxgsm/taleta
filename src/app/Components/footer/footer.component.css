@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    font-family: "Brandon Medium";
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+.col {
+    width: 50%;
+}

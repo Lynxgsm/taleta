@@ -1,0 +1,25 @@
+.example-full-width {
+    width: 100%;
+}
+
+.footer-card {
+    margin: 20px;
+    border-top: 2px dashed #eee;
+}
+
+.mat-card {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+}
+
+.container {
+    width: 40vw;
+}
+
+.main {
+    background: url('../../../assets/img/user.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}

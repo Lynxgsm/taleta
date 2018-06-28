@@ -1,0 +1,41 @@
+<div class="header">
+  <div class="container">
+    <mat-card>
+      <h1 class="center">Trouvez ce qu'il vous faut</h1>
+      <div class="col l3">
+        <app-matiere class="full-width"></app-matiere>
+      </div>
+      <div class="col l3">
+        <app-niveau class="full-width"></app-niveau>
+      </div>
+      <div class="col l3">
+        <app-date></app-date>
+      </div>
+      <div class="col l3">
+        <app-location></app-location>
+      </div>
+      <div class="center">
+        <button mat-raised-button color="accent" id="connecter" (click)="searchDone = !searchDone">Lancer la recherche</button>
+      </div>
+      <br>
+      <div class="row" *ngIf="searchDone">
+        <owl-carousel [options]="{items: 3, dots: true, navigation: true}" [items]="images" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item">
+            <app-tuteur-card name="AILI Fida Aliotti Christino" emploi="Etudiant en licence en Informatique" image="https://material.angular.io/assets/img/examples/shiba1.jpg"
+              age="24"></app-tuteur-card>
+          </div>
+          <div class="item">
+            <app-tuteur-card name="AILI Fida Aliotti Christino" emploi="Etudiant en licence en Informatique" image="https://material.angular.io/assets/img/examples/shiba1.jpg"
+              age="24"></app-tuteur-card>
+          </div>
+        </owl-carousel>
+        <!-- <app-tuteur-card name="AILI Fida Aliotti Christino" emploi="Etudiant en licence en Informatique" image="https://material.angular.io/assets/img/examples/shiba1.jpg"
+          age="24"></app-tuteur-card>
+        <app-tuteur-card name="AILI Fida Aliotti Christino" emploi="Etudiant en licence en Informatique" image="https://material.angular.io/assets/img/examples/shiba1.jpg"
+          age="32"></app-tuteur-card>
+        <app-tuteur-card name="AILI Fida Aliotti Christino" emploi="Etudiant en licence en Informatique" image="https://material.angular.io/assets/img/examples/shiba1.jpg"
+          age="32"></app-tuteur-card> -->
+      </div>
+    </mat-card>
+  </div>
+</div>

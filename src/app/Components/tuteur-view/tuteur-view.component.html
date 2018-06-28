@@ -1,0 +1,31 @@
+<app-navbar></app-navbar>
+<div class="main">
+  <div class="container">
+    <mat-card>
+      <h1 class="center">Se connecter</h1>
+      <mat-card-content>
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <input matInput type="email" placeholder="Nom d'utilisateur">
+            <mat-icon matSuffix>account_circle</mat-icon>
+          </mat-form-field>
+          <br>
+          <mat-form-field class="example-full-width">
+            <input matInput type="password" placeholder="Mot de passe">
+            <mat-icon matSuffix>lock</mat-icon>
+          </mat-form-field>
+          <div class="center">
+            <button mat-raised-button color="primary">Accéder à mon compte</button>
+          </div>
+        </form>
+        <div class="footer-card">
+          <div class="center">
+            <br>
+            <span>Vous souhaitez devenir un tuteur?</span>&nbsp;
+            <a href="" routerLink="/tuteur-new" routeLinkActive="true">CLIQUEZ ICI</a>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
