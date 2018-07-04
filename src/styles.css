@@ -66,3 +66,8 @@ h6 {
 .full-width {
     width: 100%;
 }
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}

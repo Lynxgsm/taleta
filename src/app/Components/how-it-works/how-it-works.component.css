@@ -1,0 +1,18 @@
+.content {
+    min-height: 100vh;
+}
+
+.line {
+    height: 90vh;
+    border: 6px dotted #000000;
+}
+
+.step {
+    font-weight: bold;
+    font-size: 48px;
+    width: 100;
+    text-align: center;
+    height: 48px;
+    border: 2px solid #ffd740;
+    border-radius: 50%;
+}

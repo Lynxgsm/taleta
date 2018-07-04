@@ -17,7 +17,7 @@ import {
   MatAutocompleteModule,
   MatOptionModule,
   MatIconModule,
-  MatStepperModule
+  MatStepperModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -37,6 +37,10 @@ import { LoginComponent } from './Components/login/login.component';
 import { TuteurViewComponent } from './Components/tuteur-view/tuteur-view.component';
 import { NewTuteurComponent } from './Components/new-tuteur/new-tuteur.component';
 import { NewUserComponent } from './Components/new-user/new-user.component';
+import { ReservationViewComponent } from './Components/reservation-view/reservation-view.component';
+import { WhyUsComponent } from './Components/why-us/why-us.component';
+import { HowItWorksComponent } from './Components/how-it-works/how-it-works.component';
+import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeViewComponent },
@@ -63,6 +67,10 @@ const appRoutes: Routes = [
     TuteurViewComponent,
     NewTuteurComponent,
     NewUserComponent,
+    ReservationViewComponent,
+    WhyUsComponent,
+    HowItWorksComponent,
+    WhoWeAreComponent,
   ],
   imports: [
     BrowserModule,
