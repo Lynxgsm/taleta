@@ -1,5 +1,9 @@
 .content {
     min-height: 100vh;
+    background-color: #673ab7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .line {

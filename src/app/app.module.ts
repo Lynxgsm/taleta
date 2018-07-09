@@ -41,6 +41,8 @@ import { ReservationViewComponent } from './Components/reservation-view/reservat
 import { WhyUsComponent } from './Components/why-us/why-us.component';
 import { HowItWorksComponent } from './Components/how-it-works/how-it-works.component';
 import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
+import { ContactComponent } from './Components/contact/contact.component';
+import { UserConnectComponent } from './Components/user-connect/user-connect.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeViewComponent },
@@ -48,6 +50,7 @@ const appRoutes: Routes = [
   { path: 'tuteur-signin', component: TuteurViewComponent },
   { path: 'tuteur-new', component: NewTuteurComponent },
   { path: 'user-connect', component: NewUserComponent },
+  { path: 'user-connection', component: UserConnectComponent },
   // { path: 'hero/:id', component: HeroDetailComponent },
 ];
 
@@ -71,6 +74,8 @@ const appRoutes: Routes = [
     WhyUsComponent,
     HowItWorksComponent,
     WhoWeAreComponent,
+    ContactComponent,
+    UserConnectComponent,
   ],
   imports: [
     BrowserModule,
