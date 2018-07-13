@@ -12,4 +12,8 @@ export class UserConnectComponent implements OnInit {
   ngOnInit() {
   }
 
+  signin() {
+    console.log('tino');
+  }
+
 }
