@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <div class="main">
     <div class="center">
-        <mat-horizontal-stepper [linear]="true" #stepper>
+        <mat-horizontal-stepper #stepper>
             <mat-step [stepControl]="firstFormGroup">
                 <form [formGroup]="firstFormGroup">
                     <ng-template matStepLabel>Les missions d'un tuteur</ng-template>
@@ -54,12 +54,6 @@
                                 <mat-form-field class="full-width">
                                     <input matInput placeholder="Numéro de téléphone" formControlName="secondCtrl" required>
                                 </mat-form-field>
-                            </div>
-                            <div class="col l6">
-                                <app-location class="full-width"></app-location>
-                            </div>
-                            <div class="col l6">
-                                <app-location class="full-width"></app-location>
                             </div>
                         </div>
                     </div>
