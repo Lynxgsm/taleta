@@ -18,6 +18,7 @@ import {
   MatOptionModule,
   MatIconModule,
   MatStepperModule,
+  MatSidenavModule,
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -43,6 +44,11 @@ import { HowItWorksComponent } from './Components/how-it-works/how-it-works.comp
 import { WhoWeAreComponent } from './Components/who-we-are/who-we-are.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { UserConnectComponent } from './Components/user-connect/user-connect.component';
+import { TuteurProfileViewComponent } from './Components/Tuteur/tuteur-profile-view/tuteur-profile-view.component';
+import { TuteurProfileHeaderComponent } from './Components/Tuteur/tuteur-profile-header/tuteur-profile-header.component';
+import { TuteurProfileLeftSectionComponent } from './Components/Tuteur/tuteur-profile-left-section/tuteur-profile-left-section.component';
+import { TuteurProfileSectionComponent } from './Components/Tuteur/tuteur-profile-section/tuteur-profile-section.component';
+import { TuteurProfileSidenavComponent } from './Components/Tuteur/tuteur-profile-sidenav/tuteur-profile-sidenav.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeViewComponent },
@@ -51,6 +57,7 @@ const appRoutes: Routes = [
   { path: 'tuteur-new', component: NewTuteurComponent },
   { path: 'user-connect', component: NewUserComponent },
   { path: 'user-connection', component: UserConnectComponent },
+  { path: 'tuteur-profile', component: TuteurProfileViewComponent },
   // { path: 'hero/:id', component: HeroDetailComponent },
 ];
 
@@ -76,6 +83,11 @@ const appRoutes: Routes = [
     WhoWeAreComponent,
     ContactComponent,
     UserConnectComponent,
+    TuteurProfileViewComponent,
+    TuteurProfileHeaderComponent,
+    TuteurProfileLeftSectionComponent,
+    TuteurProfileSectionComponent,
+    TuteurProfileSidenavComponent,
   ],
   imports: [
     BrowserModule,
@@ -87,6 +99,7 @@ const appRoutes: Routes = [
     MatDatepickerModule,
     MatNativeDateModule,
     MatFormFieldModule,
+    MatSidenavModule,
     MatInputModule,
     MatAutocompleteModule,
     MatOptionModule,

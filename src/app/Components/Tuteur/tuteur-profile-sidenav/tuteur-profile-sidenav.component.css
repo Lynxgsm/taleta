@@ -1,0 +1,29 @@
+.example-container {
+    position: absolute;
+    top: 10vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+}
+
+.mat-drawer {
+    width: 20vw;
+}
+
+.mat-drawer-content {
+    width: 80vw;
+}
+
+.info {
+    height: 15vh;
+    background-image: url("../../../../assets/img/12.png");
+    background-size: contain;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.circle {
+    border-radius: 50%;
+}

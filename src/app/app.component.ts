@@ -14,6 +14,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.router.navigate(['/user-connection']);
+    this.router.navigate(['/tuteur-profile']);
   }
 }

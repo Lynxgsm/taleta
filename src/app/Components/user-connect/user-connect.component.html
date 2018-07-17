@@ -17,32 +17,32 @@
           <div class="row">
             <div class="col l6">
               <mat-form-field class="full-width">
-                <input matInput placeholder="Nom" [(ngModel)]="nom">
+                <input matInput placeholder="Nom" [(ngModel)]="nom" [ngModelOptions]="{standalone: true}">
               </mat-form-field>
             </div>
             <div class="col l6">
               <mat-form-field class="full-width">
-                <input matInput placeholder="Prénom" [(ngModel)]="prenom">
+                <input matInput placeholder="Prénom" [(ngModel)]="prenom" [ngModelOptions]="{standalone: true}">
               </mat-form-field>
             </div>
             <div class="col l6">
               <mat-form-field class="full-width">
-                <input matInput type="email" [(ngModel)]="email" placeholder="Adresse E-mail">
+                <input matInput type="email" [(ngModel)]="email" placeholder="Adresse E-mail" [ngModelOptions]="{standalone: true}">
               </mat-form-field>
             </div>
             <div class="col l6">
               <mat-form-field class="full-width">
-                <input matInput type="tel" [(ngModel)]="tel" placeholder="Numéro de téléphone">
+                <input matInput type="tel" [(ngModel)]="tel" placeholder="Numéro de téléphone" [ngModelOptions]="{standalone: true}">
               </mat-form-field>
             </div>
             <div class="col l6">
               <mat-form-field class="full-width">
-                <input matInput type="password" [(ngModel)]="password" placeholder="Mot de passe">
+                <input matInput type="password" [(ngModel)]="password" placeholder="Mot de passe" [ngModelOptions]="{standalone: true}">
               </mat-form-field>
             </div>
             <div class="col l6">
               <mat-form-field class="full-width">
-                <input matInput type="password" [(ngModel)]="confirmPassword" placeholder="Confirmer votre mot de passe">
+                <input matInput type="password" [(ngModel)]="confirmPassword" [ngModelOptions]="{standalone: true}" placeholder="Confirmer votre mot de passe">
               </mat-form-field>
             </div>
           </div>
