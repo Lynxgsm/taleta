@@ -1,8 +1,0 @@
-.main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 80vh;
-    background: url('../../../assets/img/new-tuteur.jpg');
-    background-size: cover;
-}

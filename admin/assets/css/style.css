@@ -1,0 +1,168 @@
+/*======================================================================================
+                                    GENERAL
+========================================================================================*/
+
+body,
+html,
+p {
+    margin: 0;
+    padding: 0;
+    font-family: "Brandon Regular" !important;
+}
+
+nav {
+    z-index: 6;
+}
+
+header.active,
+main.active,
+footer.active {
+    padding-left: 300px;
+}
+
+@media only screen and (max-width: 992px) {
+    header,
+    main,
+    footer {
+        padding-left: 0;
+    }
+}
+
+.main {
+    z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+select {
+    font-family: "Brandon Medium";
+}
+
+.btn {
+    font-size: .8rem;
+    font-family: "Brandon Medium" !important;
+    text-transform: uppercase;
+}
+
+/* label color */
+
+.input-field label {
+    color: #000;
+}
+
+/* label focus color */
+
+.input-field input[type=text]:focus+label {
+    color: #000 !important;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.pb-2 {
+    padding-bottom: 20px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.pt-2 {
+    padding-top: 20px;
+}
+
+.p-2 {
+    padding: 20px;
+}
+
+.p-1 {
+    padding: 10px;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+/*============================================================================================================
+                                                HOME
+==============================================================================================================*/
+
+.home_content {
+    height: 100vh;
+    background: url('../img/background.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+/*======================================================================================
+                                        WHO WE ARE
+========================================================================================*/
+
+.whoweare_section {
+    background-color: #ffd740;
+}
+
+/*======================================================================================
+                                        FOOTER
+========================================================================================*/
+
+.footer {
+    display: flex;
+    font-family: "Brandon Medium";
+    background-color: rgba(0, 0, 0, .8);
+    color: white;
+}
+
+/*======================================================================================
+                                        TUTEUR LOGIN
+========================================================================================*/
+
+.tuteur_content {
+    height: 100vh;
+    background: url('../img/tuteur.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-link {
+    border-top: 1px dashed #eee;
+}
+
+/*======================================================================================
+                                        TUTEUR SIGNIN
+========================================================================================*/
+
+.tuteur_signin_content {
+    height: 100vh;
+    background: url('../img/new-tuteur.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*======================================================================================
+                                        USER ADMIN
+========================================================================================*/
+
+.user_content {
+    height: 100vh;
+}

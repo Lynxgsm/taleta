@@ -1,0 +1,204 @@
+<link rel="stylesheet" href="../css/home.css">
+<div class="home_content">
+    <div class="container">
+        <div class="card full-width">
+            <div class="card-content">
+                <div class="center">
+                    <h3>Trouvez ce qu'il vous faut</h3>
+                    <br>
+                </div>
+                <div class="row">
+                    <div class="input-field col l3 m6 s6">
+                        <select ng-model="selectedMatiere.id" ng-options="mat.id as mat.matiere for mat in matiere"></select>
+                        <label>Choisissez une matière</label>
+                    </div>
+                    <div class="col l3 m6 s6 input-field">
+                        <select ng-model="selectedNiveau.id" ng-options="niv.id as niv.niveau for niv in niveau"></select>
+                        <label>Choisissez votre niveau</label>
+                    </div>
+                    <div class="input-field col l3 m6 s6">
+                        <input type="text" ng-click="get_interval()" ng-model="cours_date">
+                        <label>Date du cours</label>
+                    </div>
+                    <div class="input-field col l3 m6 s6">
+                        <input type="text" id="localisation" ng-click="get_location()" ng-model="location" class="autocomplete">
+                        <label for="localisation">Lieu du cours</label>
+                    </div>
+                </div>
+                <div class="center">
+                    <button class="btn waves-effect waves-light yellow darken-1 black-text">Lancer la recherche</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="container">
+        <div class="center">
+            <h1>Pourquoi TALETA?</h1>
+            <h3>Nos valeurs</h3>
+            <p>
+                <strong>Taleta</strong> est née de notre volonté de répandre l’accès à l’accompagnement scolaire au Tchad, à Madagascar
+                et plus généralement en Afrique.
+            </p>
+            <p>
+                <strong>Taleta</strong> est la première plateforme africaine d’accompagnement scolaire pour les jeunes et par les
+                jeunes. Des jeunes tuteurs, étudiants principalement, accompagneront les élèves des collèges et lycées ayant
+                besoin d’un soutien scolaire.
+            </p>
+            <h3>Nos objectifs</h3>
+            <p>En partant du constat que ce sont des personnes éduquées qui vont avoir un impact sur le secteur de la santé,
+                de l’environnement, des nouvelles technologies, etc.,
+                <strong>Taleta</strong> entend donner les clés de la connaissance à des futurs entrepreneurs talentueux qui s’ignorent
+                aujourd’hui.
+            </p>
+            <p>Soucieux de créer une proximité entre les tuteurs et les tutorés,
+                <strong>Taleta</strong> a fait le choix de collaborer avec des étudiants-tuteurs principalement. En plus du service
+                de soutien scolaire, ces derniers partageront leurs expériences d’étudiants et pourront améliorer leurs conditions
+                d’études avec ce job étudiant.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="whoweare_section">
+    <div class="container">
+        <div class="row">
+            <div class="col l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/user.jpg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Voir le profil</a>
+                        <a href="#">Réserver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/user.jpg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Voir le profil</a>
+                        <a href="#">Réserver</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="assets/img/user.jpg">
+                        <span class="card-title">Card Title</span>
+                    </div>
+                    <div class="card-content">
+                        <p>I am a very simple card. I am good at containing small bits of information. I am convenient because
+                            I require little markup to use effectively.</p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Voir le profil</a>
+                        <a href="#">Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="message_section">
+    <div class="center">
+        <h3>Des questions à poser?</h3>
+        <div class="container">
+            <div class="card full-width">
+                <div class="card-content">
+                    <div class="row">
+                        <div class="input-field col l6 m6 s6">
+                            <input placeholder="Placeholder" id="nom" type="text" class="validate">
+                            <label for="nom">Nom</label>
+                        </div>
+                        <div class="input-field col l6 m6 s6">
+                            <input placeholder="Placeholder" id="objet" type="text" class="validate">
+                            <label for="objet">Objet</label>
+                        </div>
+                        <div class="input-field col l6 m6 s6">
+                            <input placeholder="Placeholder" id="prenom" type="text" class="validate">
+                            <label for="prenom">Prénom</label>
+                        </div>
+                        <div class="input-field col l6 m6 s6">
+                            <input placeholder="Placeholder" id="adresse" type="text" class="validate">
+                            <label for="adresse">Adresse</label>
+                        </div>
+                        <div class="input-field col l12 m12 s12">
+                            <textarea id="message" class="materialize-textarea"></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <div class="center">
+                            <button class="btn waves-effect waves-light purple darken-2 white-text">
+                                <span class="fa fa-send"></span> Envoyer mon message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<button data-target="date_interval" id="btnDate" class="btn hide modal-trigger"></button>
+<button data-target="localisation_modal" id="btnLocation" class="btn hide modal-trigger"></button>
+<div id="date_interval" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Date du cours</h4>
+        <div class="row">
+            <div class="input-field col l4 m4 s6">
+                <input type="text" class="datepicker" id="date_cours">
+                <label>Quand</label>
+            </div>
+            <div class="input-field col l4 m4 s6">
+                <input type="text" class="timepicker" ng-model="timeBefore">
+                <label>Heure de début</label>
+            </div>
+            <div class="input-field col l4 m4 s6">
+                <input type="text" class="timepicker" ng-model="timeAfter">
+                <label>Heure fin</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="" ng-click="agree_date_interval(timeBefore, timeAfter)" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>
+
+<div id="localisation_modal" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Lieu du cours</h4>
+        <div class="row">
+            <div class="input-field col l4 m4 s6">
+                <select ng-model="selectedPays.id" ng-change="getVille(selectedPays.id)" ng-options="p.id as p.pays for p in pays"></select>
+                <label>Choisissez votre pays</label>
+            </div>
+            <div class="input-field col l4 m4 s6">
+                <input type="text" ng-model="ville" id="ville" placeholder="Ville">
+            </div>
+            <div class="input-field col l4 m4 s6">
+                <input type="text" ng-model="adresse">
+                <label>Adresse</label>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="" ng-click="agree_localisation(ville, adresse)" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+</div>

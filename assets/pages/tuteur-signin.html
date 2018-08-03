@@ -1,0 +1,80 @@
+<div class="tuteur_signin_content">
+    <div class="container">
+        <div class="card full-width">
+            <div class="card-content">
+                <ul class="stepper linear horizontal">
+                    <li class="step active">
+                        <div class="step-title waves-effect">Missions d'un tuteur</div>
+                        <div class="step-content">
+                            <h4>Candidates pour devenir tuteur et rejoins la communauté Taleta</h4>
+                            <p>Votre mission sera d'accompagner des collégiens et lycéens ayant besoin d'aide aux devoirs, de
+                                conseil d'orientation ou de préparation aux examens.</p>
+                            <p>Une fois votre candidature validée par l'Equipe
+                                <strong>Taleta</strong>, vous pourrez créer votre profil, proposer les matières dans lesquelles vous
+                                aider, fixer vos prix et gérer votre planning selon vos disponibilités.</p>
+                            <br>
+                            <h4 class="center">Alors? T'attends quoi?</h4>
+                            <div class="step-actions">
+                                <button class="waves-effect waves-dark btn next-step">Déposer ma candidature</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-title waves-effect">Remplis les informations</div>
+                        <div class="step-content">
+                            <div class="row">
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="text" id="nom" ng-model="nom">
+                                    <label for="nom">Nom</label>
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="text" id="prenom" ng-model="prenom">
+                                    <label for="prénom">Prénom</label>
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <select ng-model="selectedPays.id" ng-options="p.id as p.pays for p in pays"></select>
+                                    <label>Choisissez votre pays</label>
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="text" id="adresse">
+                                    <label for="adresse">Adresse</label>
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="text" ng-model="ville" id="ville" placeholder="Ville">
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="text" class="datepicker" id="date_naissance">
+                                    <label>Date de naissance</label>
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="tel" id="tel">
+                                    <label for="tel">Téléphone</label>
+                                </div>
+                                <div class="input-field col s12 l6 m6">
+                                    <input type="text" id="nom">
+                                    <label for="nom">Nom</label>
+                                </div>
+                            </div>
+                            <div class="step-actions">
+                                <button class="waves-effect waves-dark btn next-step">Valider ma candidature</button>
+                                <button class="btn waves-effect waves-dark yellow darken-2 previous-step">Revoir les missions d'un tuteur</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="step">
+                        <div class="step-title waves-effect">Merci!</div>
+                        <div class="step-content center">
+                            <h3>Merci pour votre candidature,</h3>
+                            <p>L'Equipe Taleta va maintenant procéder à l'examen de votre dossier et reviendra vers vous rapidement
+                                si votre candidature est retenue.</p>
+                            <h2 class="light">L'Equipe Taleta</h2>
+                            <div class="step-actions">
+                                <a href="#/" class="waves-effect waves-dark btn">Revenir à la page d'accueil</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
