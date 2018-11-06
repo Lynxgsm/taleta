@@ -1,0 +1,20 @@
+<div class="row">
+  <h1>Choisissez la date</h1>
+  <div class="col l6 m6 s12">
+    <mat-form-field class="full-width">
+      <input matInput (dateChange)="selectedStartDate($event)" [matDatepicker]="start_picker" placeholder="Date de début">
+      <mat-datepicker-toggle matSuffix [for]="start_picker"></mat-datepicker-toggle>
+      <mat-datepicker #start_picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="col l6 m6 s12">
+    <mat-form-field class="full-width">
+      <input matInput (dateChange)="selectedFinalDate($event)" [matDatepicker]="last_picker" placeholder="Date de fin">
+      <mat-datepicker-toggle matSuffix [for]="last_picker"></mat-datepicker-toggle>
+      <mat-datepicker #last_picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <div class="center">
+    <button mat-raised-button (click)="closeModal()">Valider</button>
+  </div>
+</div>

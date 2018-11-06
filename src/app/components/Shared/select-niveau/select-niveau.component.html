@@ -1,0 +1,7 @@
+<mat-form-field class="full-width">
+  <mat-select required placeholder="Choisissez le niveau" (selectionChange)="selectedNiveau($event)" multiple>
+    <mat-option *ngFor="let niveau of niveaux" [value]="niveau.id">
+      {{niveau.niveau}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

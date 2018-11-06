@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col l6 m6 s12">
+    <mat-form-field class="full-width">
+      <mat-select required (selectionChange)="getQuartier($event)" placeholder="Choisissez votre ville">
+        <mat-option *ngFor="let v of villes" [value]="v.id">
+          {{v.ville}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="col l6 m6 s12">
+    <mat-form-field class="full-width">
+      <input matInput required placeholder="Choisissez votre quartier..." type="text" [matAutocomplete]="auto">
+    </mat-form-field>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selectionQuartier($event)">
+      <mat-option *ngFor="let quartier of quartiers" [value]="quartier.quartier">{{quartier.quartier}}</mat-option>
+    </mat-autocomplete>
+  </div>
+</div>

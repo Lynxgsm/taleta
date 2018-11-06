@@ -1,0 +1,91 @@
+<div class="content hide-on-med-and-down">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" class="side" opened>
+      <div class="user-content">
+        <div class="user-img">
+          <img src="../../../assets/media/user.png" class="circle" alt="">
+        </div>
+        <div class="user-info">
+          <p>{{nom}}</p>
+          <p>{{email}}</p>
+        </div>
+      </div>
+      <mat-list>
+        <mat-list-item>
+          <a mat-button routerLink="/setting" routerLinkActive="active">
+            <span class="fa fa-cog icon"></span> Paramètres</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-home')" routerLinkActive="active">
+            <span class="fa fa-home icon"></span> Accueil</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-reservation')" routerLinkActive="active">
+            <span class="fa fa-calendar icon"></span> Réservations</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-paiement')" routerLinkActive="active">
+            <span class="fa fa-dollar icon"></span> Historique de paiement</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-avis')">
+            <span class="fa fa-info icon"></span> Avis</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-navbar isInAdmin="true" isConnected="true"></app-navbar>
+      <app-user-info (user_info)="getUserInfo($event)" *ngIf="page==='user-home'"></app-user-info>
+      <app-user-paiement class="animate fadeIn" *ngIf="page==='user-paiement'"></app-user-paiement>
+      <app-user-reservation class="animate fadeIn" *ngIf="page==='user-reservation'"></app-user-reservation>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
+<div class="content hide-on-large-only">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="over" opened="{{opened}}">
+      <div class="user-content">
+        <div class="user-img">
+          <img src="../../../assets/media/user.png" class="circle" alt="">
+        </div>
+        <div class="user-info">
+          <p>{{nom}}</p>
+          <p>{{email}}</p>
+        </div>
+      </div>
+      <mat-list>
+        <mat-list-item>
+          <a mat-button routerLink="/setting" routerLinkActive="active">
+            <span class="fa fa-cog icon"></span> Paramètres</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-home')" routerLinkActive="active">
+            <span class="fa fa-home icon"></span> Accueil</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-reservation')" routerLinkActive="active">
+            <span class="fa fa-calendar icon"></span> Réservations</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-paiement')" routerLinkActive="active">
+            <span class="fa fa-dollar icon"></span> Historique de paiement</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('user-avis')">
+            <span class="fa fa-info icon"></span> Avis</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-navbar (setSideState)="setSideState($event)" isInAdmin="true" isConnected="true"></app-navbar>
+      <app-user-info (user_info)="getUserInfo($event)" *ngIf="page==='user-home'"></app-user-info>
+      <app-user-paiement class="animate fadeIn" *ngIf="page==='user-paiement'"></app-user-paiement>
+      <app-user-reservation class="animate fadeIn" *ngIf="page==='user-reservation'"></app-user-reservation>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
+<app-footer></app-footer>

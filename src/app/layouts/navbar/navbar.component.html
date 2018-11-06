@@ -1,0 +1,30 @@
+<mat-toolbar class="mat-elevation-z2">
+  <mat-toolbar-row>
+    <a href="" routerLink="/">
+      <img src="../../../assets/media/logo.png" alt="logo" class="logo">
+    </a>
+    <span class="spacer"></span>
+    <div class="hide-on-med-and-down">
+      <button mat-raised-button *ngIf="!isConnected" class="navbar-li" color="primary" routerLink="/tuteur-login">Espace
+        tuteur</button>
+      <button mat-raised-button *ngIf="!isConnected" class="navbar-li" color="accent" routerLink="/user-login">Se
+        connecter</button>
+      <button mat-raised-button *ngIf="!isConnected" class="navbar-li basic-color" color="basic" routerLink="/user-signin">S'inscrire</button>
+      <button mat-raised-button *ngIf="isConnected && !isInAdmin" class="navbar-li" color="accent" routerLink="/{{url}}">Mon
+        compte</button>
+      <button mat-raised-button *ngIf="isConnected" class="navbar-li" color="primary" (click)="signout()">Se
+        déconnecter</button>
+    </div>
+
+    <div id="mySidenav" class="sidenav">
+      <a class="closebtn" (click)="toggleSideBar()">&times;</a>
+      <a href="#" routerLink="/tuteur-login" *ngIf="!isConnected">Espace tuteur</a>
+      <a href="#" routerLink="/user-login" *ngIf="!isConnected">Se connecter</a>
+      <a href="#" routerLink="/user-signin" *ngIf="!isConnected">S'inscrire</a>
+      <a href="#" routerLink="/{{url}}" *ngIf="isConnected && !isInAdmin">Mon compte</a>
+      <a *ngIf="isConnected" (click)="signout()">Se déconnecter</a>
+    </div>
+
+    <button mat-button class="hide-on-large-only" (click)="toggleSideBar()"><span class="fa fa-bars"></span></button>
+  </mat-toolbar-row>
+</mat-toolbar>

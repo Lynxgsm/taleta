@@ -1,0 +1,29 @@
+.content {
+  min-height: 80vh;
+  width: 100%;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../../assets/media/background.jpg');
+  background-size: cover;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.search_result {
+  margin-top: .75rem;
+}
+
+
+.item-carousel {
+  border: 0 !important;
+}
+
+.mat-card {
+  overflow: hidden;
+}

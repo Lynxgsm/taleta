@@ -1,0 +1,22 @@
+<app-navbar isConnected="false" isInAdmin="0"></app-navbar>
+<div class="content">
+  <mat-card>
+    <h1 class="center">Connectez-vous</h1>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="E-mail" type="email" [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Mot de passe" type="password" [(ngModel)]="password">
+    </mat-form-field>
+    <div class="center">
+      <button mat-raised-button color="accent" (click)="login()" [disabled]="checkForm()" *ngIf="loaded">Accéder à mon
+        compte</button>
+      <mat-spinner *ngIf="!loaded" strokeWidth="2" diameter="35"></mat-spinner>
+    </div>
+    <br>
+    <div class="sign">
+      <p>Vous souhaitez devenir tuteur? <a href="" routerLink="/tuteur-signin">Cliquez ici</a></p>
+    </div>
+  </mat-card>
+</div>
+<app-footer></app-footer>

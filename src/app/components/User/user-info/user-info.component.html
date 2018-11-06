@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col l12 m12 s12">
+    <mat-card>
+      <div class="row">
+        <div class="col l2 m2 hide-on-small">
+          <img src="../../../assets/media/user.png" class="img-responsive" alt="">
+        </div>
+        <div class="col l6 m6 s12">
+          <mat-list>
+            <mat-list-item>
+              <strong class="title">Nom & Prénom:</strong> <span class="name">{{user.nom}} {{user.prenom}}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong class="title">âge:</strong> <span class="age">{{age}} ans</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong class="title">Adresse:</strong> <span class="adresse">{{user.adresse}}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong class="title">Contact:</strong> <span class="contact">{{user.tel}}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong>E-mail:</strong> <span class="email">{{user.email}}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <div class="col l4">
+          <p>{{user.description}}</p>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="col l6">
+    <br>
+    <app-user-reservation></app-user-reservation>
+  </div>
+  <div class="col l6">
+    <br>°
+    <app-user-planning></app-user-planning>
+  </div>
+</div>

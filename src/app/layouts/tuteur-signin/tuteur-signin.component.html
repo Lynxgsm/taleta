@@ -1,0 +1,138 @@
+<app-navbar isInAdmin="0"></app-navbar>
+<div class="content">
+  <div class="container">
+    <mat-card>
+      <mat-card-content>
+        <div class="opacity" *ngIf="!loaded">
+          <mat-spinner strokeWidth="2" diameter="35"></mat-spinner>
+        </div>
+        <mat-horizontal-stepper [linear]="isLinear" #stepper>
+          <mat-step>
+            <div>
+              <ng-template matStepLabel class="center">Missions du tuteur</ng-template>
+              <h1>Candidatez pour devenir tuteur et rejoignez la communauté Taléta!</h1>
+              <p>Votre mission sera d'accompagner des élèves ayant besoin d'aide aux devoirs, de conseils d'orientation
+                ou de préparation aux examens. </p>
+              <p>Une fois votre candidature validée par l'équipe,
+                <strong>Taléta!</strong> vos
+                identifiants de connexion vous seront communiqués et vous pourriez mettre à jour votre profil avec vos
+                disponibilités.</p>
+              <br>
+              <h1 class="center">Alors? Vous attendez quoi?</h1>
+              <button class="right" mat-button mat-raised-button matStepperNext>Déposer votre candidature</button>
+            </div>
+          </mat-step>
+          <mat-step>
+            <div>
+              <ng-template matStepLabel>Remplis les informations</ng-template>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>
+                    <h2>Informations personnelles</h2>
+                  </mat-card-title>
+                </mat-card-header>
+                <div class="row">
+                  <div class="col l4 m6 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="Nom (*)" [(ngModel)]="nom" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col l4 m6 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="Prénom" [(ngModel)]="prenom" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col l4 m6 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput (dateChange)="selectedFinalDate($event)" [matDatepicker]="last_picker"
+                        placeholder="Date de naissance" required>
+                      <mat-datepicker-toggle matSuffix [for]="last_picker"></mat-datepicker-toggle>
+                      <mat-datepicker #last_picker></mat-datepicker>
+                    </mat-form-field>
+                  </div>
+                  <div class="col l4 m6 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="Adresse de domicile ou quartier" required [(ngModel)]="adresse">
+                    </mat-form-field>
+                  </div>
+                  <div class="col l8 m12 s12">
+                    <app-select-pays (getLocation)="getVille($event)"></app-select-pays>
+                  </div>
+                  <div class="col l4 m4 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="Numéro de téléphone" [(ngModel)]="tel" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col l4 m4 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="Adresse E-mail (*)" [(ngModel)]="email" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col l4 m4 s6">
+                    <mat-form-field class="full-width">
+                      <input matInput placeholder="Mot de passe (*)" type="password" [(ngModel)]="password" required>
+                    </mat-form-field>
+                  </div>
+                  <div class="col l12 m12 s12">
+                    <mat-form-field class="full-width">
+                      <textarea matInput placeholder="Décrivez-vous en quelques lignes" [(ngModel)]="description"
+                        required></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </mat-card>
+              <br>
+              <mat-card>
+                <mat-card-header>
+                  <mat-card-title>
+                    <h2>Informations professionnelles</h2>
+                  </mat-card-title>
+                </mat-card-header>
+                <div class="row">
+                  <div class="col l12 m12 s12">
+                    <label for="singleFile">Charger votre fichier ici <sup>(*)</sup></label>
+                    <p>Veuillez joindre à ce formulaire un fichier respectif avec votre CV, votre lettre de
+                      motivation et une photo de votre CIN ou de votre passeport.</p>
+                  </div>
+                  <div class="col l4">
+                    <label for="cv">Votre CV</label>
+                    <input id="cv" type="file" [(ngModel)]="cv" />
+                  </div>
+                  <div class="col l4">
+                    <label for="lettre_motivation">Votre lettre de motivation</label>
+                    <input id="lettre_motivation" type="file" [(ngModel)]="lettre_motivation" />
+                  </div>
+                  <div class="col l4">
+                    <label for="cin">Photo de votre CIN / passeport</label>
+                    <input id="cin" type="file" [(ngModel)]="cin" />
+                  </div>
+                </div>
+              </mat-card>
+              <br>
+              <button mat-raised-button matStepperPrevious class="mat-previous">Revoir les missions d'un tuteur</button>
+              <button mat-raised-button color="primary" (click)="signin()" [disabled]="checkForm()">
+                <span *ngIf="loaded">Valider vos informations</span>
+                <mat-spinner *ngIf="!loaded" strokeWidth="2" diameter="35"></mat-spinner>
+              </button>
+              <button mat-raised-button id="finishSignin" matStepperNext color="primary" class="hide"></button>
+            </div>
+          </mat-step>
+          <mat-step>
+            <div>
+              <ng-template matStepLabel>Merci!</ng-template>
+              <h1>Merci pour votre candidature,</h1>
+              <p>L'Equipe Taléta! procédera à l'examen attentif de votre dossier et reviendra vers
+                vous rapidement
+                si votre candidature est retenue.</p>
+              <h1 class="light center">A bientôt! L'Equipe Taléta!</h1>
+            </div>
+            <div class="center">
+              <button mat-raised-button routerLink="/" color="accent">Revenir à la page d'accueil</button>
+            </div>
+          </mat-step>
+        </mat-horizontal-stepper>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,108 @@
+<div class="content hide-on-med-and-down">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="side" class="side" opened>
+      <div class="user-content">
+        <div class="user-img">
+          <img src="../../../assets/media/user.png" class="circle" alt="">
+        </div>
+        <div class="user-info">
+          <p>{{username}}</p>
+          <p>{{email}}</p>
+        </div>
+      </div>
+      <mat-list>
+        <mat-list-item>
+          <a mat-button routerLink="/setting" routerLinkActive="active">
+            <span class="fa fa-cog icon"></span> Paramètres</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-home')" routerLinkActive="active">
+            <span class="fa fa-home icon"></span> Accueil</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-planning')" routerLinkActive="active">
+            <span class="fa fa-calendar icon"></span> Planning</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-tarif')" routerLinkActive="active">
+            <span class="fa fa-dollar icon"></span> Tarifs et compétences</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-avis')" routerLinkActive="active">
+            <span class="fa fa-info icon"></span> Avis des utilisateurs</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-navbar isInAdmin="true" isConnected="true"></app-navbar>
+      <app-tuteur-info *ngIf="page==='tuteur-home'"></app-tuteur-info>
+      <div *ngIf="page==='tuteur-home'">
+        <div class="col l6">
+          <app-tuteur-reservation></app-tuteur-reservation>
+        </div>
+        <div class="col l6">
+          <app-tuteur-planning></app-tuteur-planning>
+        </div>
+      </div>
+      <app-tuteur-planning *ngIf="page==='tuteur-planning'"></app-tuteur-planning>
+      <app-tuteur-tarif *ngIf="page==='tuteur-tarif'"></app-tuteur-tarif>
+      <app-footer></app-footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
+
+
+<div class="content hide-on-large-only">
+  <mat-drawer-container class="example-container">
+    <mat-drawer mode="over" opened="{{opened}}">
+      <div class="user-content">
+        <div class="user-img">
+          <img src="../../../assets/img/user.png" class="circle" alt="">
+        </div>
+        <div class="user-info">
+          <p>{{username}}</p>
+          <p>{{email}}</p>
+        </div>
+      </div>
+      <mat-list>
+        <mat-list-item>
+          <a mat-button routerLink="/setting" routerLinkActive="active">
+            <span class="fa fa-cog icon"></span> Paramètres</a>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-home')" routerLinkActive="active">
+            <span class="fa fa-home icon"></span> Accueil</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-planning')" routerLinkActive="active">
+            <span class="fa fa-calendar icon"></span> Planning</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-tarif')" routerLinkActive="active">
+            <span class="fa fa-dollar icon"></span> Tarifs et compétences</a>
+        </mat-list-item>
+        <mat-list-item>
+          <a mat-button (click)="changePage('tuteur-avis')" routerLinkActive="active">
+            <span class="fa fa-info icon"></span> Avis des utilisateurs</a>
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <app-navbar isInAdmin="true" isConnected="true"></app-navbar>
+      <app-tuteur-info *ngIf="page==='tuteur-home'"></app-tuteur-info>
+      <div *ngIf="page==='tuteur-home'">
+        <div class="col l6">
+          <app-tuteur-reservation></app-tuteur-reservation>
+        </div>
+        <div class="col l6">
+          <app-tuteur-planning></app-tuteur-planning>
+        </div>
+      </div>
+      <app-tuteur-planning *ngIf="page==='tuteur-planning'"></app-tuteur-planning>
+      <app-tuteur-tarif *ngIf="page==='tuteur-tarif'"></app-tuteur-tarif>
+      <app-footer></app-footer>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

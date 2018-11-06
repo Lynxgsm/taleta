@@ -1,0 +1,17 @@
+.mat-list-img {
+  position: relative;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  left: 0;
+}
+
+a.check {
+  text-decoration: none;
+  color: teal;
+}
+
+a {
+  text-decoration: none;
+}

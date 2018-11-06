@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/@angular/material/prebuilt-themes/custom.css');
+@import url('./assets/css/row.css');
+@import url('./assets/css/color.css');
+@import url('./assets/css/animate.css');
+@import url('./assets/css/media_queries.css');
+@import url('./assets/css/font-awesome/css/font-awesome.css');
+@import url('../node_modules/fullcalendar/dist/fullcalendar.css');
+
+@font-face {
+  font-family: "Gadugi";
+  src: url(./assets/fonts/gadugi.ttf);
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p,
+span,
+a,
+input,
+li,
+ul {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.mat-step-label,
+button,
+.mat-raised-button {
+  font-family: "Gadugi";
+}
+
+ul {
+  list-style-type: none;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

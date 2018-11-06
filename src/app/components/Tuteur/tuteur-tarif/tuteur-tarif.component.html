@@ -1,0 +1,33 @@
+<div class="content">
+  <div class="row">
+    <div class="col l6 m6 s12">
+      <mat-card>
+        <mat-card-content>
+          <h1>Mes tarifs</h1>
+          <mat-list>
+            <mat-list-item *ngFor="let tarif of tarifs">
+              <mat-icon mat-list-icon>info</mat-icon>
+              <h4 mat-line>Cours de {{tarif.matiere.matiere}} pour {{tarif.niveau.niveau}} - {{tarif.prix}} CFA</h4>
+              <!--        <p mat-line> {{reservation.attente}} </p> -->
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="col l6 m6 s12">
+      <mat-card>
+        <mat-card-content>
+          <h1>Tarif</h1>
+          <app-select-niveau (getNiveau)="selectNiveau($event)"></app-select-niveau>
+          <app-select-matiere (getMatiere)="selectMatiere($event)"></app-select-matiere>
+          <mat-form-field class="full-width">
+            <input matInput placeholder="Prix" type="number" min="{{min}}" max="{{max}}" [(ngModel)]="prix">
+          </mat-form-field>
+          <div class="center">
+            <button mat-raised-button color="accent" (click)="assignTarif()">Assigner le prix</button>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

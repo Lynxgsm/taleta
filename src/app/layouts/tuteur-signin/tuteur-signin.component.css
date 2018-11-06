@@ -1,0 +1,44 @@
+.mat-step-header .mat-step-label.mat-step-label-active {
+  font-family: "GS Medium";
+}
+
+.content {
+  min-height: 80vh;
+  background: url('../../../assets/media/admin.jpeg');
+  background-size: cover;
+}
+
+.container {
+  padding: .75rem;
+}
+
+.opacity {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.mat-previous {
+  margin-right: .75rem;
+}
+
+label {
+  font-family: "GS Regular";
+}
+
+.l4 {
+  overflow: hidden;
+}
+
+.mat-error {
+  font-size: 12px;
+  margin-top: -10px;
+}

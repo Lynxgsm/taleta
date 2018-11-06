@@ -1,0 +1,56 @@
+<div class="row">
+  <div class="col l12 m12 s12">
+    <mat-card>
+      <h3>Informations personnels</h3>
+      <div class="row">
+        <div class="col l2 m2 hide-on-small">
+          <img src="../../../assets/media/user.png" class="img-responsive" alt="">
+        </div>
+        <div class="col l6 m10 s12">
+          <mat-list>
+            <mat-list-item>
+              <strong class="title">Nom & Prénom:</strong> <span class="name">{{nom}} {{prenom}}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong class="title">âge:</strong> <span class="age">{{age}} ans</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong class="title">Adresse:</strong> <span class="adresse">{{adresse}}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong class="title">Contact:</strong> <span class="contact">{{tel}}</span>
+            </mat-list-item>
+            <mat-list-item>
+              <strong>E-mail:</strong> <span class="email">{{email}}</span>
+            </mat-list-item>
+          </mat-list>
+        </div>
+        <div class="col l4 m12 s12">
+          <p>{{description}}</p>
+          <strong>Note globale: </strong>
+          <bar-rating [(rate)]="rate" [max]="5" [readOnly]="true"></bar-rating>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="col l12 m12 s12" *ngIf="fromAdmin">
+    <mat-card>
+      <h3>Informations professionnels</h3>
+      <div class="row">
+        <div class="col l4 m12 s12 center">
+          <button mat-raised-button color="basic"><span class="fa fa-download"></span> Télécharger son CV</button>
+        </div>
+        <div class="col l4 m12 s12 center">
+          <button mat-raised-button color="basic"><span class="fa fa-download"></span> Télécharger sa lettre de
+            motivation</button>
+        </div>
+        <div class="col l4 m12 s12 center">
+          <button mat-raised-button color="basic"><span class="fa fa-download"></span> Télécharger sa CIN / son
+            passeport</button>
+        </div>
+      </div>
+    </mat-card>
+    <button mat-raised-button color="primary">Supprimer le tuteur</button>
+    <button mat-raised-button color="accent" *ngIf="!validated">Approuver le tuteur</button>
+  </div>
+</div>

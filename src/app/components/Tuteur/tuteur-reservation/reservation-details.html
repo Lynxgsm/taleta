@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+<p>Je m'appelle {{nom}}.</p> Je vous propose un {{title}} à {{adresse}} le {{date}} entre {{startHour}} et {{endHour}}.
+<p>{{attente}}</p>
+<div class="row">
+  <button mat-raised-button style="margin-right: 10px;" *ngIf="!accord" (click)="acceptReservation()" color="primary">Accepter</button>
+  <button mat-raised-button (click)="closeModal()">Fermer</button>
+</div>

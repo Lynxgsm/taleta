@@ -1,1 +1,0 @@
-angular.module('app', ['ngRoute', 'ngFileUpload', 'appRoutes', 'HomeController', 'TuteurSigninController', 'TuteurLoginController', 'UserSigninController', 'UserLoginController', 'TuteurController', 'UserController', 'MainController', 'loader']);

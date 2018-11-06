@@ -1,0 +1,16 @@
+.content {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url('../../../assets/media/tuteur.jpg');
+  background-size: cover;
+}
+
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px dashed #eee;
+}

@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="content">
+  <mat-card>
+    <h1 class="center">Connectez-vous</h1>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="E-mail" type="email" [(ngModel)]="email">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Mot de passe" type="password" [(ngModel)]="password">
+    </mat-form-field>
+    <div class="center button-container">
+      <button mat-raised-button *ngIf="loaded" (click)="login()" color="accent">Accéder à votre compte</button>
+      <mat-spinner *ngIf="!loaded" strokeWidth="2" diameter="35"></mat-spinner>
+      <!-- <p *ngIf="loaded">ou</p>
+      <button mat-raised-button *ngIf="loaded" class="blue-grey darken-4 white-text"><span class="fa fa-facebook-official icon"></span>
+        Inscrivez-vous via Facebook</button> -->
+    </div>
+    <br>
+    <div class="sign">
+      <p>Vous avez oublié votre mot de passe? <a href="" routerLink="/user-password">Cliquez ici</a></p>
+    </div>
+  </mat-card>
+</div>
+<app-footer></app-footer>

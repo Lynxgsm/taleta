@@ -1,0 +1,12 @@
+.container>.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.container {
+  min-height: 80vh;
+  padding: 3vh;
+}

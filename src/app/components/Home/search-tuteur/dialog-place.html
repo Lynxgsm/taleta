@@ -1,0 +1,9 @@
+<div class="row">
+  <h1>Choisissez le lieu</h1>
+  <div class="col l12">
+    <app-select-pays (getLocation)="getPlace($event)"></app-select-pays>
+  </div>
+  <div class="center">
+    <button mat-raised-button (click)="closeModal()">Valider</button>
+  </div>
+</div>

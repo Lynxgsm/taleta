@@ -1,0 +1,7 @@
+<mat-form-field class="full-width">
+  <mat-select required placeholder="Choisissez la matière" (selectionChange)="selectedMatiere($event)">
+    <mat-option *ngFor="let matiere of matieres" [value]="matiere.id">
+      {{matiere.matiere}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,17 @@
+.content {
+  min-height: 80vh;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-icon {
+  font-size: 3rem;
+  width: inherit;
+  height: inherit;
+  padding: 30px;
+  background-color: #eee;
+  border-radius: 50%;
+}

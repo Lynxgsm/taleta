@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="center">
+    <h1>Notre équipe</h1>
+  </div>
+  <div class="row" *ngIf="teams.length>0">
+    <div class="col l4" *ngFor="let team of teams">
+      <app-profile-card email="{{team.email}}" fonction="{{team.fonction}}" nom="{{team.nom}}" prenom="{{team.prenom}}"
+        photo="{{team.photo}}" description="{{team.description}}"></app-profile-card>
+    </div>
+  </div>
+</div>

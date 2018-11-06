@@ -1,0 +1,36 @@
+<div class="container">
+  <mat-card>
+    <h1 class="center">Des questions à poser?</h1>
+    <div class="row">
+      <div class="col l6 m6 s12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Nom" [(ngModel)]="nom" required>
+        </mat-form-field>
+      </div>
+      <div class="col l6 m6 s12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Prénom" [(ngModel)]="prenom">
+        </mat-form-field>
+      </div>
+      <div class="col l6 m6 s12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Adresse E-mail" [(ngModel)]="email" required>
+        </mat-form-field>
+      </div>
+      <div class="col l6 m6 s12">
+        <mat-form-field class="full-width">
+          <input matInput placeholder="Objet" [(ngModel)]="objet" required>
+        </mat-form-field>
+      </div>
+      <div class="col l12 m6 s12">
+        <mat-form-field class="full-width">
+          <textarea matInput placeholder="Message" [(ngModel)]="message" required></textarea>
+        </mat-form-field>
+      </div>
+      <div class="center">
+        <button mat-raised-button (click)="sendMessage()" color="primary" [disabled]="nom===undefined || nom==='' || email===undefined || email==='' || message===undefined || message==='' || objet===undefined || objet===''"><span
+            class="fa fa-send"></span> Envoyer</button>
+      </div>
+    </div>
+  </mat-card>
+</div>

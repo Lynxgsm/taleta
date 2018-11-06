@@ -1,0 +1,24 @@
+.img-responsive {
+  max-width: 100%;
+}
+
+.row {
+  margin-top: 0.75rem;
+}
+
+.mat-list-item {
+  height: 25px;
+}
+
+.title {
+  text-transform: capitalize;
+  margin-right: 10px;
+}
+
+strong {
+  margin-right: 10px;
+}
+
+button {
+  margin: 10px;
+}

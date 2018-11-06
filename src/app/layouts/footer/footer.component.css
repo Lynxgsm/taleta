@@ -1,0 +1,35 @@
+.footer {
+  font-family: "GS Medium";
+  background-color: rgba(0, 0, 0, .8);
+  color: white;
+  min-height: 20vh;
+}
+
+.row,
+.container {
+  margin-bottom: 0;
+  height: 100%;
+}
+
+li>a {
+  color: white;
+  text-decoration: none;
+}
+
+li>a:hover {
+  text-decoration: underline;
+}
+
+.social-container {
+  display: flex;
+  min-height: 100px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 2rem;
+}
+
+
+.col {
+  height: 60%;
+}

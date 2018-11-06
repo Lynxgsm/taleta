@@ -1,1 +1,0 @@
-var urlBase = "../API/api/";

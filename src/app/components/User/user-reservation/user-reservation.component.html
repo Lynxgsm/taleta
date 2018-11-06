@@ -1,0 +1,56 @@
+<div class="content">
+  <mat-card>
+    <h1>Mes réservations</h1>
+    <mat-list>
+      <mat-list-item>
+        <mat-icon>hourglass_empty</mat-icon>: En attente de votre paiement
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>alarm</mat-icon>: En attente de l'approbation de votre tuteur
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon>check</mat-icon>: Réservation validée des 2 parties
+      </mat-list-item>
+    </mat-list>
+    <mat-tab-group mat-stretch-tabs class="full-width">
+      <mat-tab label="Tous">
+        <mat-list>
+          <mat-list-item *ngFor="let reservation of reservations">
+            <a href="">
+              <mat-icon *ngIf="reservation.accord && !en_attente">check</mat-icon>
+            </a>
+            <!-- <mat-icon *ngIf="!reservation.accord && !en_attente">close</mat-icon> -->
+            <mat-icon *ngIf="reservation.en_attente">alarm</mat-icon>
+            <h4 mat-line>{{reservation.title}}</h4>
+            <p mat-line> {{reservation.tuteur.nom}} {{reservation.tuteur.prenom}}</p>
+            <p mat-line> {{reservation.start}} à {{reservation.end}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+      <mat-tab label="Accordée">
+        <mat-list>
+          <mat-list-item *ngFor="let reservation of reservations">
+            <mat-icon *ngIf="reservation.accord">check</mat-icon>
+            <mat-icon *ngIf="reservation.en_attente">alarm</mat-icon>
+            <h4 mat-line>{{reservation.title}}</h4>
+            <p mat-line> {{reservation.tuteur.nom}} {{reservation.tuteur.prenom}}</p>
+            <p mat-line> {{reservation.start}} à {{reservation.end}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+      <mat-tab label="Refusée">
+        <mat-list>
+          <mat-list-item *ngFor="let reservation of reservations">
+            <mat-icon *ngIf="reservation.accord">check</mat-icon>
+            <mat-icon *ngIf="reservation.en_attente">alarm</mat-icon>
+            <h4 mat-line>{{reservation.title}}</h4>
+            <p mat-line> {{reservation.tuteur.nom}} {{reservation.tuteur.prenom}}</p>
+            <p mat-line> {{reservation.start}} à {{reservation.end}}</p>
+          </mat-list-item>
+        </mat-list>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card>
+</div>
+<br>
+<app-search-tuteur notitle="true" onhome="true"></app-search-tuteur>

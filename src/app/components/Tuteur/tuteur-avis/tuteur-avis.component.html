@@ -1,0 +1,7 @@
+<mat-list>
+  <mat-list-item *ngFor="let reservation of reservations">
+    <h4 mat-line class="clickable"><a>{{reservation.etudiant.nom}}
+        {{reservation.etudiant.prenom}}</a></h4>
+    <p mat-line> {{reservation.attente}} </p>
+  </mat-list-item>
+</mat-list>
